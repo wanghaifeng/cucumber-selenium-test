@@ -12,7 +12,7 @@ public class SmokeTest {
 	public void I___precondition() throws Throwable {
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get("http://www.baidu.com");
+		driver.get("https://hostigation.com/billing/aff.php?aff=326");
 		
 	}
 
