@@ -1,0 +1,42 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+//java代码样式插件
+apply plugin: 'com.github.sherter.google-java-format'
+
+buildscript {
+  repositories {
+    maven {
+      url 'https://oss.sonatype.org/content/repositories/snapshots/'
+    }
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.github.sherter.googlejavaformatgradleplugin:google-java-format-gradle-plugin:0.4-SNAPSHOT'
+  }
+}
+
+
+repositories {
+  jcenter()
+}
+
+dependencies {
+
+  compile 'org.slf4j:slf4j-api:1.7.21'
+  compile 'net.sourceforge.cobertura:cobertura:2.1.1'
+  compile 'info.cukes:cucumber-core:1.2.4'
+  compile 'info.cukes:cucumber-java:1.2.4'
+  compile 'info.cukes:cucumber-junit:1.2.4'
+  compile 'info.cukes:cucumber-jvm-deps:1.0.5'
+  compile 'net.masterthought:cucumber-reporting:2.7.0'
+  compile 'io.cucumber:gherkin:4.0.0'
+  compile 'org.mockito:mockito-all:2.0.2-beta'
+  compile 'org.seleniumhq.selenium:selenium-server:2.45.0'
+
+
+  testCompile 'junit:junit:4.12'
+}
+
+
